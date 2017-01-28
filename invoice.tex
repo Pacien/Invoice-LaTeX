@@ -93,19 +93,16 @@
 	Payment due date:	\hfill\textbf{\thefinaldate}\\
 }
 
-%Invoice Part
 \begin{invoice}{\currencycode}{0}
 	\ProjectTitle{Items}
 	\Fee{Web Hosting {\footnotesize 1.10.2014 - 30.9.2015}} {145.95} {1}
 	\Fee{Domain Name xxxx.ch {\footnotesize 1.10.2014 - 30.9.2015}} {23.00} {1}
 \end{invoice}
 
-%Bottom Message Field  
-\begin{textblock}{12.6}(1.7,9.5)
-\raggedright
-Total payment due in 30 days\\
-\textit{Thank you for your business!}
-\end{textblock}
+\writefooter{
+	Total payment due in 30 days\\
+	\textit{Thank you for your business!}
+}
 
 \end{calibri}   
 

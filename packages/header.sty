@@ -11,7 +11,7 @@
 	\begin{minipage}[t]{.6\textwidth}
 	\raggedright
 	{\huge #1}\\
-	\vspace{2ex}
+	\vspace{3ex}
 	{\small #2}
 	\end{minipage}%
 	\begin{minipage}[t]{.4\textwidth}
@@ -22,6 +22,12 @@
 	\end{minipage}
 
 	\vspace{3ex}
+}
+
+% #1: content
+\newcommand{\writefooter}[1]{
+	\vfill\raggedright\footnotesize
+	#1
 }
 
 \endinput
