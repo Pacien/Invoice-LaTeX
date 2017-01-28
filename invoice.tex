@@ -14,6 +14,7 @@
 \usepackage[margin=1cm]{geometry}
 %\usepackage[french]{./packages/invoice}
 \usepackage[english]{./packages/invoice}
+\usepackage{./packages/slip}
 \usepackage{hyperref}
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
@@ -138,98 +139,6 @@ Total payment due in 30 days\\
 
 \end{calibri}   
 
-%BVR Part with OCR Font
-\begin{ocr}
+\writeslip{\wirereceiver}{\wirefor}{\account}{\wirefrom}{\francs}{\cents}{\refno}{\refcode}{\communication}
 
-%Payment for Field 1 
-\begin{textblock}{4.2}(0.3,10.8)
-\raggedright
-\wirereceiver\
-\end{textblock}
-
-%Payment for Field 2
-\begin{textblock}{4.2}(4.8,10.8)
-\raggedright
-\wirereceiver\
-\end{textblock}
-
-%In Favor of Field (Postal Field only)
-\begin{textblock}{4.2}(0.3,11.5)
-\raggedright
-\wirefor\
-\end{textblock}
-
-%In Favor of Field 2 (Postal Field only)
-\begin{textblock}{4.2}(4.8,11.5)
-\raggedright
-\wirefor\
-\end{textblock}
-
-%Account Number Field 1
-\begin{textblock}{2.2}(2.3,12.65)
-\raggedright
-\account\
-\end{textblock}
-
-%Account Number Field 2
-\begin{textblock}{2.2}(6.9,12.65)
-\raggedright
-\account\
-\end{textblock}
-
-% Amount CHF Field 1
-\begin{textblock}{2}(1.1,13.08)
-\raggedleft
-\francs\
-\end{textblock}
-
-% Amount CHF Field 2
-\begin{textblock}{2}(5.7,13.08)
-\raggedleft
-\francs\
-\end{textblock}
-
-% Amount in CTS of CHF Field 1
-\begin{textblock}{2}(3.9,13.08)
-\raggedright
-\cents\
-\end{textblock}
-
-% Amount in CTS of CHF Field 2
-\begin{textblock}{2}(8.5,13.08)
-\raggedright
-\cents\
-\end{textblock}
-
-% Payment From Field 1
-\begin{textblock}{4}(0.3,13.7)
-\raggedright
-\wirefrom\
-\end{textblock}
-
-% Payment From Field 2
-\begin{textblock}{4}(9.45,13.05)
-\raggedright
-\wirefrom\
-\end{textblock}
-
-% Reason / Communications Field
-\begin{textblock}{3.9}(9.5,10.8)
-\raggedright
-\communication\
-\end{textblock}
-
-% Reference Number Field
-\begin{textblock}{7}(9.5,12.16)
-\raggedright
-\refno\
-\end{textblock}
-
-% Bottom Code Field
-\begin{textblock}{11}(5.1,14.95)
-\raggedright
-\refcode\
-\end{textblock}
-
-\end{ocr}
 \end{document}

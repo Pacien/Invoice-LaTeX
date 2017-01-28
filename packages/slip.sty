@@ -1,0 +1,110 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{./packages/slip}[2017/01/28 Inpayment slip text overlay]
+
+\ExecuteOptions{}
+
+% #1: wire receiver
+% #2: wire for
+% #3: account number
+% #4: wire from
+% #5: integer amount
+% #6: cents
+% #7: reference number
+% #8: ESR
+% #9: communication
+\newcommand{\writeslip}[9]{
+	%BVR Part with OCR Font
+	\begin{ocr}
+		%Payment for Field 1 
+		\begin{textblock}{4.2}(0.3,10.8)
+		\raggedright
+		#1\
+		\end{textblock}
+
+		%Payment for Field 2
+		\begin{textblock}{4.2}(4.8,10.8)
+		\raggedright
+		#1\
+		\end{textblock}
+
+		%In Favor of Field (Postal Field only)
+		\begin{textblock}{4.2}(0.3,11.5)
+		\raggedright
+		#2\
+		\end{textblock}
+
+		%In Favor of Field 2 (Postal Field only)
+		\begin{textblock}{4.2}(4.8,11.5)
+		\raggedright
+		#2\
+		\end{textblock}
+
+		%Account Number Field 1
+		\begin{textblock}{2.2}(2.3,12.65)
+		\raggedright
+		#3\
+		\end{textblock}
+
+		%Account Number Field 2
+		\begin{textblock}{2.2}(6.9,12.65)
+		\raggedright
+		#3\
+		\end{textblock}
+
+		% Amount CHF Field 1
+		\begin{textblock}{2}(1.1,13.08)
+		\raggedleft
+		#5\
+		\end{textblock}
+
+		% Amount CHF Field 2
+		\begin{textblock}{2}(5.7,13.08)
+		\raggedleft
+		#5\
+		\end{textblock}
+
+		% Amount in CTS of CHF Field 1
+		\begin{textblock}{2}(3.9,13.08)
+		\raggedright
+		#6\
+		\end{textblock}
+
+		% Amount in CTS of CHF Field 2
+		\begin{textblock}{2}(8.5,13.08)
+		\raggedright
+		#6\
+		\end{textblock}
+
+		% Payment From Field 1
+		\begin{textblock}{4}(0.3,13.7)
+		\raggedright
+		#4\
+		\end{textblock}
+
+		% Payment From Field 2
+		\begin{textblock}{4}(9.45,13.05)
+		\raggedright
+		#4\
+		\end{textblock}
+
+		% Reason / Communications Field
+		\begin{textblock}{3.9}(9.5,10.8)
+		\raggedright
+		#9\
+		\end{textblock}
+
+		% Reference Number Field
+		\begin{textblock}{7}(9.5,12.16)
+		\raggedright
+		#7\
+		\end{textblock}
+
+		% Bottom Code Field
+		\begin{textblock}{11}(5.1,14.95)
+		\raggedright
+		#8\
+		\end{textblock}
+	\end{ocr}
+}
+
+\endinput
