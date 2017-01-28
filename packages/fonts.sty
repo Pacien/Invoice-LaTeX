@@ -1,0 +1,10 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{./packages/fonts}[2017/01/28 Inpayment slip typesetting]
+
+%Set Fonts (Calibri and OCR-B)
+\newfontfamily\myfont[Path = fonts/]{OCR-B}
+\newfontfamily\mymainfont[Path = fonts/,ItalicFont = *-Italic,BoldFont = *-Bold]{Calibri}
+\newenvironment{calibri}{\mymainfont}{}
+\newenvironment{ocr}{\myfont}{}
+
+\endinput
