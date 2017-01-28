@@ -4,9 +4,8 @@
 % #1: title
 % #2: issuer
 % #3: recipient
-% #4: meta keys
-% #5: meta values
-\newcommand{\writeheader}[5]{
+% #4: meta information
+\newcommand{\writeheader}[4]{
 	{\huge #1}
 
 	%From Field
@@ -25,12 +24,6 @@
 	\begin{textblock}{4}(10,1.3)
 	\raggedright
 	{\small #4}
-	\end{textblock}
-
-	%Informations Values Field
-	\begin{textblock}{4}(10,1.3)
-	\raggedleft
-	{\small	#5}
 	\end{textblock}
 }
 
